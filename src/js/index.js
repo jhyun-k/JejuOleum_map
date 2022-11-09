@@ -12,6 +12,9 @@ window.initMap = function () {
         // initMap(data) 
         let pos = data.data
         
+        const infowindow = new google.maps.InfoWindow();
+
+        
         for(let i = 0;i<pos.length;i++){
             // console.log(pos[i].경도);
         let 오름명 = pos[i].오름명
@@ -31,9 +34,11 @@ window.initMap = function () {
         });
         
         let marker = new google.maps.Marker({position: {lat:위도,lng:경도}, map: map})
-        const infowindow = new google.maps.InfoWindow();
+
+        
         marker.addListener("click", () => {
             map.panTo(marker.position);
+
             const explain = `${오름명} : ${설명}`
             infowindow.setContent(explain);
             infowindow.open({
