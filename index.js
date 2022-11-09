@@ -14,12 +14,17 @@ window.initMap = function () {
         
         for(let i = 0;i<pos.length;i++){
             // console.log(pos[i].경도);
-        let marker = new google.maps.Marker({position: {lat:Number(pos[i].위도),lng:Number(pos[i].경도)}, map: map})
+        let 오름명 = pos[i].오름명
         let 설명 = pos[i].설명
+        let 위도 = Number(pos[i].위도)
+        let 경도 = Number(pos[i].경도)
+
+        let marker = new google.maps.Marker({position: {lat:위도,lng:경도}, map: map})
         const infowindow = new google.maps.InfoWindow();
         marker.addListener("click", () => {
             map.panTo(marker.position);
-            infowindow.setContent(설명);
+            const explain = `${오름명} : ${설명}`
+            infowindow.setContent(explain);
             infowindow.open({
               anchor: marker,
               map,
