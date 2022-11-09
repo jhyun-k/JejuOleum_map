@@ -6,13 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
 </head>
-<script defer src="./index.js"></script>
+<script defer src="./src/js/index.js"></script>
   <script
     defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXzAcmfYJbFEls7kYth9SzpT3ZbeeBee8&callback=initMap"
   ></script>
+  <style>
+    #map{
+      width: 600px;
+      height: 500px;
+      margin: auto;
+    }
+     h1{
+      text-align: center;
+    } 
+  </style>
 <body>
-    <div id="map" style="height: 600px;"></div>
+      <h1>오름 위치를 찾아보자!😎</h1>
+      <div id="map"></div>
 
 <script>
     

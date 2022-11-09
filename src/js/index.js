@@ -5,7 +5,7 @@ window.initMap = function () {
       
     });
 //    let marker = new google.maps.Marker({position: {lat:33.4426234,lng:126.537055}, map: map});
-    fetch("https://api.odcloud.kr/api/15096996/v1/uddi:6738a90c-ec96-4245-a187-9528cea62904?page=1&perPage=90&serviceKey=9llzYCL8YbC8lWXtECA%2BJnP3bstFGvI2%2Bp9PEqwH5FLw05ZcSF6JtRjsUQvr7ScQhG5yqowpLUJMeLviQZozVw%3D%3D")
+    fetch("https://api.odcloud.kr/api/15096996/v1/uddi:6738a90c-ec96-4245-a187-9528cea62904?page=1&perPage=30&serviceKey=9llzYCL8YbC8lWXtECA%2BJnP3bstFGvI2%2Bp9PEqwH5FLw05ZcSF6JtRjsUQvr7ScQhG5yqowpLUJMeLviQZozVw%3D%3D")
     .then((r) => r.json())
     .then(data => {
         console.log(data.data[0])
@@ -19,6 +19,17 @@ window.initMap = function () {
         let 위도 = Number(pos[i].위도)
         let 경도 = Number(pos[i].경도)
 
+        new google.maps.Circle({
+          strokeColor: "blue",
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: "blue",
+          fillOpacity: 0.35,
+          map,
+          center: {lat:위도,lng:경도},
+          radius: 600,
+        });
+        
         let marker = new google.maps.Marker({position: {lat:위도,lng:경도}, map: map})
         const infowindow = new google.maps.InfoWindow();
         marker.addListener("click", () => {
