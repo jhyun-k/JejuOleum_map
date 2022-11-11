@@ -48,8 +48,9 @@ window.initMap = function () {
 
         marker.addListener("click", () => {
           map1.panTo(marker.position);
-          
+          const info = document.querySelector('.info')
           const explain = `${오름명} : ${설명}`
+          info.innerText = explain
           infowindow.setContent(explain);
           infowindow.open({
             anchor: marker,
@@ -80,6 +81,8 @@ window.initMap = function () {
           let 코스이름 = ollehPos[i].courseName;
           let 시작위도 = ollehPos[i].startLatitude
           let 시작경도 = ollehPos[i].startLongitude
+          let 시작지점 = ollehPos[i].startPoint
+          let 도착지점 = ollehPos[i].endPoint
 
 
           let marker = new google.maps.Marker({
@@ -91,8 +94,10 @@ window.initMap = function () {
           })
           marker.addListener("click", () => {
             map2.panTo(marker.position);
-  
-            const explain = `${길이름} :${코스이름} `
+
+            const info = document.querySelector('.info')
+            const explain = `${길이름} : ${코스이름} `
+            info.innerText= explain +  ` \n 코스 :  ${시작지점}~${도착지점}`;
             infowindow.setContent(explain);
             infowindow.open({
               anchor: marker,
@@ -122,6 +127,8 @@ window.initMap = function () {
             let 코스이름 = giftPos[i].courseName;
             let 위도 = giftPos[i].latitude
             let 경도 = giftPos[i].longitude
+            let 주소 = giftPos[i].addressDoro
+            let url = giftPos[i].placeUrl
   
   
             let marker = new google.maps.Marker({
@@ -133,8 +140,10 @@ window.initMap = function () {
             })
             marker.addListener("click", () => {
               map3.panTo(marker.position);
-    
+
+              const info = document.querySelector('.info')
               const explain = `${가게이름} `
+              info.innerHTML = `${explain} :  ${주소} \n <a href="${url}">${url}</a>`
               infowindow.setContent(explain);
               infowindow.open({
                 anchor: marker,

@@ -7,6 +7,10 @@ h1{
     color: orange;
   }
 
+body{
+    background-color: rgb(255, 249, 237);
+    /* background: url(src/귤.jpeg) ; */
+}
 .map{
     position: relative;
 }
@@ -17,7 +21,7 @@ h1{
 #map1{
     position: absolute;
     left: 500px;
-    top: 50px;
+    top: 80px;
     width: 600px;
     height: 500px;
     margin: auto;
@@ -26,7 +30,7 @@ h1{
   #map2{
     position: absolute;
     left: 500px;
-    top: 50px;
+    top: 80px;
     width: 600px;
     height: 500px;
     margin: auto;
@@ -38,7 +42,7 @@ h1{
 
   #map3{
     left: 500px;
-    top: 50px;
+    top: 80px;
     position: absolute;
     width: 600px;
     height: 500px;
@@ -52,6 +56,7 @@ h1{
     width: 600px;
     position: absolute;
     left: 508px;
+    top: 40px;
     display: flex;
   }
   .tab p:hover{
@@ -80,4 +85,15 @@ h1{
   }
   .gift.click{
     background-color: orange;
+  }
+
+  .info{
+    background-color: rgb(252, 218, 156);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+    width: 600px;
+    height: 70px;
+    left: 515px;
+    padding: 5px 10px;
   }
