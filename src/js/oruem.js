@@ -144,7 +144,7 @@ window.initMap = function () {
               const info = document.querySelector('.info')
               const explain = `${가게이름} `
               
-              info.innerText= `${explain} : ${주소} \n <a href="${url}">${url}</a>`;
+              info.innerHTML= `${explain} : ${주소} \n <a href="${url}">${url}</a>`;
               infowindow.setContent(explain);
               infowindow.open({
                 anchor: marker,
