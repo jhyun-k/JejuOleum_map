@@ -20,7 +20,8 @@ body{
 }
 #map1{
     position: absolute;
-    left: 500px;
+    left: 50%;
+    transform: translateX(-50%);
     top: 80px;
     width: 600px;
     height: 500px;
@@ -29,7 +30,8 @@ body{
 
   #map2{
     position: absolute;
-    left: 500px;
+    left: 50%;
+    transform: translateX(-50%);
     top: 80px;
     width: 600px;
     height: 500px;
@@ -41,7 +43,8 @@ body{
   }
 
   #map3{
-    left: 500px;
+    left: 50%;
+    transform: translateX(-50%);
     top: 80px;
     position: absolute;
     width: 600px;
@@ -55,7 +58,8 @@ body{
   .tab{
     width: 600px;
     position: absolute;
-    left: 508px;
+    left: 49%;
+    transform: translateX(-50%);
     top: 40px;
     display: flex;
   }
@@ -94,6 +98,7 @@ body{
     bottom: 0px;
     width: 600px;
     height: 70px;
-    left: 515px;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 5px 10px;
   }
