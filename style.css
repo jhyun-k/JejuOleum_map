@@ -1,0 +1,83 @@
+p{
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    color: orange;
+  }
+
+.map{
+    position: relative;
+}
+#map1,#map2,#map3{
+    border: 15px solid orange;
+    border-radius: 0 20px 20px 20px;
+}
+#map1{
+    position: absolute;
+    left: 500px;
+    top: 50px;
+    width: 600px;
+    height: 500px;
+    margin: auto;
+  }
+
+  #map2{
+    position: absolute;
+    left: 500px;
+    top: 50px;
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    display: none;
+  } 
+  #map2.click{
+    display: block;
+  }
+
+  #map3{
+    left: 500px;
+    top: 50px;
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    display: none;
+  }
+  #map3.click{
+    display: block;
+  }
+  .tab{
+    width: 600px;
+    position: absolute;
+    left: 508px;
+    display: flex;
+  }
+  .tab p:hover{
+    background-color: orange;
+  }
+
+  .oruem,.olleh,.gift{
+    background-color: rgb(139, 139, 139);
+    color: white;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    padding: 5px 10px;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+  }
+
+  .tab p.click{
+    background-color: orange;
+  }
+  .oruem.click{
+    background-color: orange;
+  }
+  .olleh.click{
+    background-color: orange;
+  }
+  .gift.click{
+    background-color: orange;
+  }

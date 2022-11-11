@@ -6,27 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
 </head>
-<script defer src="./src/js/index.js"></script>
-  <script
-    defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXzAcmfYJbFEls7kYth9SzpT3ZbeeBee8&callback=initMap"
-  ></script>
-  <style>
-    #map{
-      width: 600px;
-      height: 500px;
-      margin: auto;
-    }
-     h1{
-      text-align: center;
-    } 
-  </style>
-<body>
-      <h1>오름 위치를 찾아보자!😎</h1>
-      <div id="map"></div>
+<link rel="stylesheet" href="style.css">
 
-<script>
-    
-</script>
+<body>
+      <h1>제주도로 놀러가자 와아</h1>
+      <div class='tab'>
+        <p class='oruem click'>🌴 제주 오름 위치</p>
+        <p class='olleh'>🍊 제주 올레길 위치</p>
+        <p class='gift'>🎁 기념품가게</p>
+      </div>
+      <div class='map'>
+        <div id="map1" class='click'></div>
+        <div id="map2" class=''></div>
+        <div id="map3" class=''></div>
+      </div>
+
+<script defer src="./src/js/oruem.js"></script>
+<script
+defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXzAcmfYJbFEls7kYth9SzpT3ZbeeBee8&callback=initMap"
+></script>
+
 </body>
 </html>
